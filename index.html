@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+    <title>crud operation</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body >
+    <h1 class="title">Adhiran Dizee World!!!</h1>
+    <div>
+        <div class="heading">
+            <h2 class="title1">StudentInfo</h2>
+            <input type="text" id="myInput" onkeyup ="myFunction()" style="margin-bottom: 16px; width: 30%;"
+                placeholder="Search..">
+            <div>
+                <button class="addbtn" onClick="addStudent()">AddStudent </button>
+            </div>
+        </div>
+    </div>
+    <br><br>
+    <!-- <p class="sort"><button class="sortbtn" onclick="sortTable()">Sort</button></p> -->
+    <table id="studentList">
+        <thead class="head">
+            <tr>
+                <th onclick="sortTable(0)"> Name </th>
+                <!-- <span><i class="fa-solid fa-caret-down "></i></span> -->
+                <th onclick="sortTable(1)">FatherName </th>
+                <!-- <span><i class="fa-solid fa-caret-down "></i></span> -->
+                <th onclick="sortTable(2)">D.O.B </th>
+                <!-- <span><i class="fa-solid fa-caret-down "></i></span> -->
+                <th onclick="sortTable(3)">Address </th>
+                <!-- <span><i class="fa-solid fa-caret-down "></i></span> -->
+                <th>Action </th>
+                <!-- <span><i class="fa-solid fa-caret-down "></i></span> -->
+            </tr>
+        </thead>
+        <tbody class="value" id="record" >
+          
+        </tbody>
+    </table> 
+    <button id="prevButton">Previous</button> 
+<button id="nextButton">Next</button> 
+    <!-- <footer class="align-center" >
+    <div class="pages">
+        <button type="button" class="page-btn prev-page"><<</button>
+        <button type="button" class="page-btn active">1</button>
+        <button type="button" class="page-btn">2</button>
+        <button type="button" class="page-btn">3</button>
+        <button type="button" class="page-btn">4</button>
+        <button type="button" class="page-btn">5</button>
+        <button type="button" class="page-btn">6</button>
+        <button type="button" class="page-btn next-page">>></button>
+      </div>
+    </footer> -->
+    <br><br>
+    <div id="myDiv">
+        <div class="student-form">
+           
+                        <form  id="form" class="forum" onsubmit="event.preventDefault();onFormSubmit();" autocomplete="on" >
+                            <p class="formtitle">## Please enter your field ##</p><br>
+                            <div>
+                                <label>Name</label><br>
+                                <input type="text" name="firstname" id="firstname" placeholder="enter your name" required>
+                            </div>
+                            <div>
+                                <label>FatherName</label><br>
+                                <input type="text" name="fname" id="fname" placeholder="enter your father name" required>
+                            </div>
+                            <div>
+                                <label>D.O.B</label><br>
+                                <input type="date" class="date" name="dob" id="dob" placeholder="enter your D.O.B" required>
+                            </div>
+                            <div>
+                                <label>Address</label><br>
+                                <input type="text" name="address" id="address" placeholder="enter your address" required>
+                            </div>
+                            <div class="subform">
+                                <button class="form-submit" > submit</button>
+                            </div>
+                        </form>          
+        </div>
+    </div>
+    <script src="myscript.js"></script>
+</body>
+
+</html>
